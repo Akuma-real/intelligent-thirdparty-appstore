@@ -30,12 +30,9 @@ jobs:
           with open("thirdparty.json", "r", encoding="utf-8") as f:
               data = json.load(f)
 
-          # 获取所有路径值
-          paths = list(data.values())
-
-          # 创建新的排序字典
+          # 保持原有的键名顺序，只修改键名格式
           new_data = {}
-          for i, path in enumerate(paths, 1):
+          for i, (key, path) in enumerate(data.items(), 1):
               new_data[f"path{i}"] = path
 
           # 写入新文件（直接写入根目录的临时文件）

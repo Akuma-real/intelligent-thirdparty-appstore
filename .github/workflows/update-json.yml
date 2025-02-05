@@ -14,17 +14,6 @@ jobs:
     steps:
       - name: Checkout source branch
         uses: actions/checkout@v3
-        with:
-          path: source
-
-      - name: Create and checkout data branch
-        run: |
-          cd source
-          git checkout --orphan data || git checkout data
-          git rm -rf . || true
-          git clean -fdx
-          cd ..
-          mkdir -p data
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -38,7 +27,7 @@ jobs:
           import os
 
           # 读取源文件
-          with open("source/thirdparty.json", "r", encoding="utf-8") as f:
+          with open("thirdparty.json", "r", encoding="utf-8") as f:
               data = json.load(f)
 
           # 获取所有路径值
@@ -57,12 +46,27 @@ jobs:
               json.dump(new_data, f, ensure_ascii=False, indent=2)
           EOF
 
-      - name: Commit and push changes
+      - name: Create and push data branch
         run: |
-          cd source
+          # 配置 Git
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          cp ../data/thirdparty.json .
+          
+          # 创建并切换到 data 分支
+          git checkout -b data
+          
+          # 移动文件到根目录
+          mv data/thirdparty.json thirdparty.json
+          
+          # 删除所有其他文件
+          git rm -rf .
+          git clean -fdx
+          
+          # 添加新文件
           git add thirdparty.json
-          git commit -m "Update thirdparty.json paths" || echo "No changes to commit"
+          
+          # 提交更改
+          git commit -m "Update thirdparty.json paths"
+          
+          # 强制推送到 data 分支
           git push origin data --force 

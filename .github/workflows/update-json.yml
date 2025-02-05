@@ -25,14 +25,15 @@ jobs:
           python - <<EOF
           import json
           import os
+          from collections import OrderedDict
 
           # 读取源文件
           with open("thirdparty.json", "r", encoding="utf-8") as f:
-              data = json.load(f)
+              data = json.load(f, object_pairs_hook=OrderedDict)
 
-          # 保持原有的键名顺序，只修改键名格式
-          new_data = {}
-          for i, (key, path) in enumerate(data.items(), 1):
+          # 保持原有顺序，只修改键名
+          new_data = OrderedDict()
+          for i, (_, path) in enumerate(data.items(), 1):
               new_data[f"path{i}"] = path
 
           # 写入新文件（直接写入根目录的临时文件）

@@ -1,0 +1,63 @@
+name: Update JSON File
+
+on:
+  push:
+    branches:
+      - main  # 或者你的源分支名
+    paths:
+      - 'thirdparty.json'
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v3
+        with:
+          path: source
+
+      - name: Checkout data branch
+        uses: actions/checkout@v3
+        with:
+          ref: data
+          path: data
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Update JSON file
+        run: |
+          python -c '
+import json
+import os
+
+# 读取源文件
+with open("source/thirdparty.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+# 获取所有路径值
+paths = list(data.values())
+
+# 创建新的排序字典
+new_data = {}
+for i, path in enumerate(paths, 1):
+    new_data[f"path{i}"] = path
+
+# 确保输出目录存在
+os.makedirs("data", exist_ok=True)
+
+# 写入新文件
+with open("data/thirdparty.json", "w", encoding="utf-8") as f:
+    json.dump(new_data, f, ensure_ascii=False, indent=2)
+          '
+
+      - name: Commit and push changes
+        run: |
+          cd data
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add thirdparty.json
+          git commit -m "Update thirdparty.json paths" || echo "No changes to commit"
+          git push 

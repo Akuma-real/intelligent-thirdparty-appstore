@@ -29,29 +29,29 @@ jobs:
 
       - name: Update JSON file
         run: |
-          python -c '
-import json
-import os
+          python - <<EOF
+          import json
+          import os
 
-# 读取源文件
-with open("source/thirdparty.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
+          # 读取源文件
+          with open("source/thirdparty.json", "r", encoding="utf-8") as f:
+              data = json.load(f)
 
-# 获取所有路径值
-paths = list(data.values())
+          # 获取所有路径值
+          paths = list(data.values())
 
-# 创建新的排序字典
-new_data = {}
-for i, path in enumerate(paths, 1):
-    new_data[f"path{i}"] = path
+          # 创建新的排序字典
+          new_data = {}
+          for i, path in enumerate(paths, 1):
+              new_data[f"path{i}"] = path
 
-# 确保输出目录存在
-os.makedirs("data", exist_ok=True)
+          # 确保输出目录存在
+          os.makedirs("data", exist_ok=True)
 
-# 写入新文件
-with open("data/thirdparty.json", "w", encoding="utf-8") as f:
-    json.dump(new_data, f, ensure_ascii=False, indent=2)
-          '
+          # 写入新文件
+          with open("data/thirdparty.json", "w", encoding="utf-8") as f:
+              json.dump(new_data, f, ensure_ascii=False, indent=2)
+          EOF
 
       - name: Commit and push changes
         run: |

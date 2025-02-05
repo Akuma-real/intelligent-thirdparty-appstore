@@ -38,11 +38,8 @@ jobs:
           for i, path in enumerate(paths, 1):
               new_data[f"path{i}"] = path
 
-          # 确保输出目录存在
-          os.makedirs("data", exist_ok=True)
-
-          # 写入新文件
-          with open("data/thirdparty.json", "w", encoding="utf-8") as f:
+          # 写入新文件（直接写入根目录的临时文件）
+          with open("new_thirdparty.json", "w", encoding="utf-8") as f:
               json.dump(new_data, f, ensure_ascii=False, indent=2)
           EOF
 
@@ -55,12 +52,12 @@ jobs:
           # 创建并切换到 data 分支
           git checkout -b data
           
-          # 移动文件到根目录
-          mv data/thirdparty.json thirdparty.json
-          
-          # 删除所有其他文件
+          # 删除所有文件（保留新生成的 JSON）
           git rm -rf .
-          git clean -fdx
+          git clean -fdx -e new_thirdparty.json
+          
+          # 重命名文件
+          mv new_thirdparty.json thirdparty.json
           
           # 添加新文件
           git add thirdparty.json

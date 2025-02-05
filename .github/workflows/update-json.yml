@@ -29,11 +29,15 @@ jobs:
 
           # 读取源文件
           with open("thirdparty.json", "r", encoding="utf-8") as f:
-              data = json.load(f, object_pairs_hook=OrderedDict)
+              # 使用列表来保存所有路径，包括重复的
+              paths = []
+              data = json.load(f)
+              for path in data.values():
+                  paths.append(path)
 
-          # 保持原有顺序，只修改键名
+          # 创建新的字典，保持所有路径
           new_data = OrderedDict()
-          for i, (_, path) in enumerate(data.items(), 1):
+          for i, path in enumerate(paths, 1):
               new_data[f"path{i}"] = path
 
           # 写入新文件（直接写入根目录的临时文件）

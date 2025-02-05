@@ -17,11 +17,14 @@ jobs:
         with:
           path: source
 
-      - name: Checkout data branch
-        uses: actions/checkout@v3
-        with:
-          ref: data
-          path: data
+      - name: Create and checkout data branch
+        run: |
+          cd source
+          git checkout --orphan data || git checkout data
+          git rm -rf . || true
+          git clean -fdx
+          cd ..
+          mkdir -p data
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -56,9 +59,10 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          cd data
+          cd source
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          cp ../data/thirdparty.json .
           git add thirdparty.json
           git commit -m "Update thirdparty.json paths" || echo "No changes to commit"
-          git push 
+          git push origin data --force 

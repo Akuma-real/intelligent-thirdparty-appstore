@@ -6,7 +6,7 @@ on:
     branches:
       - main  # 或者你的源分支名
     paths:
-      - 'thirdparty.json'
+      - 'apps/**'
 
 jobs:
   update-json:
@@ -25,20 +25,23 @@ jobs:
           python - <<EOF
           import json
           import os
-          from collections import OrderedDict
+          from pathlib import Path
 
-          # 读取源文件
-          with open("thirdparty.json", "r", encoding="utf-8") as f:
-              data = json.load(f, object_pairs_hook=OrderedDict)
-
-          # 直接替换键名，保持原始顺序
-          new_data = OrderedDict()
-          for i, (key, value) in enumerate(data.items(), 1):
-              new_data[f"path{i}"] = value
-
-          # 写入新文件（直接写入根目录的临时文件）
-          with open("new_thirdparty.json", "w", encoding="utf-8") as f:
-              json.dump(new_data, f, ensure_ascii=False, indent=2)
+          # 读取所有 .app 文件
+          apps_dir = Path('apps')
+          apps_data = {}
+          
+          for i, app_file in enumerate(sorted(apps_dir.glob('*.app')), 1):
+              with open(app_file, 'r', encoding='utf-8') as f:
+                  path = f.read().strip()
+                  name = app_file.stem  # 获取文件名（不含扩展名）
+                  apps_data[name] = {
+                      f"path{i}": path
+                  }
+          
+          # 写入新文件
+          with open('new_thirdparty.json', 'w', encoding='utf-8') as f:
+              json.dump(apps_data, f, ensure_ascii=False, indent=2)
           EOF
 
       - name: Create and push data branch

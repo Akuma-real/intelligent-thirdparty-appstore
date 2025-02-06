@@ -1,0 +1,1 @@
+/sdcard/Android/data/taipei.sean.challegram/ 

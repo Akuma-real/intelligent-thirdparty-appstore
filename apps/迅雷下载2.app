@@ -1,0 +1,1 @@
+/sdcard/Android/data/com.xunlei.downloadprovider/files/ThunderDownload/ 

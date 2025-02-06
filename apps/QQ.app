@@ -1,1 +1,1 @@
-/sdcard/Android/data/com.tencent.mobileqq/Tencent/QQfile_recv/
+/sdcard/Android/data/com.tencent.mobileqq/Tencent/QQfile_recv/ 

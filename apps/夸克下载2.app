@@ -1,1 +1,0 @@
-/sdcard/quark/download/ 

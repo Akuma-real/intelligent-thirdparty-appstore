@@ -1,1 +1,0 @@
-/sdcard/wandoujia/downloader/apk/ 

@@ -1,1 +1,0 @@
-/sdcard/Android/data/com.taptap/files/Download/taptaptmp/ 

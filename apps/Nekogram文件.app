@@ -1,1 +1,0 @@
-/sdcard/Android/data/tw.nekomimi.nekogram/files/Telegram/Telegram Files/ 

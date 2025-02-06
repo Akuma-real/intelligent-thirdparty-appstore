@@ -1,1 +1,0 @@
-/sdcard/tencent/MicroMsg/Download/ 

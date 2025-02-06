@@ -1,1 +1,0 @@
-/sdcard/Android/data/nekox.messenger/files/documents/ 

@@ -1,0 +1,277 @@
+[
+  {
+    "name": "123云盘",
+    "path_id": "path1",
+    "path_name": "/sdcard/123云盘/"
+  },
+  {
+    "name": "360极速浏览器",
+    "path_id": "path2",
+    "path_name": "/sdcard/360LiteBrowser/download/"
+  },
+  {
+    "name": "Challegram",
+    "path_id": "path3",
+    "path_name": "/sdcard/Android/data/taipei.sean.challegram/"
+  },
+  {
+    "name": "Challegram2",
+    "path_id": "path4",
+    "path_name": "/sdcard/Android/data/taipei.sean.challegram/"
+  },
+  {
+    "name": "Challegram文档",
+    "path_id": "path5",
+    "path_name": "/sdcard/Android/data/org.thunderdog.challegram/files/documents/"
+  },
+  {
+    "name": "Challegram文档2",
+    "path_id": "path6",
+    "path_name": "/sdcard/Android/data/org.thunderdog.challegram/files/documents/"
+  },
+  {
+    "name": "Chrome",
+    "path_id": "path7",
+    "path_name": "/sdcard/Android/data/com.android.chrome/files/Download/"
+  },
+  {
+    "name": "GJZS",
+    "path_id": "path8",
+    "path_name": "/sdcard/data/data/Han.GJZS/files/Configuration_File/"
+  },
+  {
+    "name": "M云",
+    "path_id": "path9",
+    "path_name": "/sdcard/M_Cloud/download/"
+  },
+  {
+    "name": "NekoX",
+    "path_id": "path10",
+    "path_name": "/sdcard/NekoX/"
+  },
+  {
+    "name": "NekoX文档",
+    "path_id": "path11",
+    "path_name": "/sdcard/Android/data/nekox.messenger/files/documents/"
+  },
+  {
+    "name": "Nekogram下载",
+    "path_id": "path12",
+    "path_name": "/sdcard/Download/Nekogram/"
+  },
+  {
+    "name": "Nekogram图片",
+    "path_id": "path13",
+    "path_name": "/sdcard/Android/data/tw.nekomimi.nekogram/files/Telegram/Telegram Images/"
+  },
+  {
+    "name": "Nekogram文件",
+    "path_id": "path14",
+    "path_name": "/sdcard/Android/data/tw.nekomimi.nekogram/files/Telegram/Telegram Files/"
+  },
+  {
+    "name": "Nekogram文档",
+    "path_id": "path15",
+    "path_name": "/sdcard/Android/data/tw.nekomimi.nekogram/files/Telegram/Telegram Documents/"
+  },
+  {
+    "name": "Nekogram视频",
+    "path_id": "path16",
+    "path_name": "/sdcard/Android/data/tw.nekomimi.nekogram/files/Telegram/Telegram Video/"
+  },
+  {
+    "name": "QQ",
+    "path_id": "path17",
+    "path_name": "/sdcard/Android/data/com.tencent.mobileqq/Tencent/QQfile_recv/"
+  },
+  {
+    "name": "QQ浏览器",
+    "path_id": "path18",
+    "path_name": "/sdcard/QQBrowser/"
+  },
+  {
+    "name": "ShortX",
+    "path_id": "path19",
+    "path_name": "/sdcard/Android/data/tornaco.apps.shortx/files/"
+  },
+  {
+    "name": "TIM",
+    "path_id": "path20",
+    "path_name": "/sdcard/Android/data/com.tencent.tim/Tencent/TIMfile_recv/"
+  },
+  {
+    "name": "TIM接收",
+    "path_id": "path21",
+    "path_name": "/sdcard/tencent/TIMfile_recv/"
+  },
+  {
+    "name": "TapTap",
+    "path_id": "path22",
+    "path_name": "/sdcard/Android/data/com.taptap/files/Download/taptaptmp/"
+  },
+  {
+    "name": "Telegram文件",
+    "path_id": "path23",
+    "path_name": "/sdcard/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/"
+  },
+  {
+    "name": "Telegram文档",
+    "path_id": "path24",
+    "path_name": "/sdcard/Telegram/Telegram Documents/"
+  },
+  {
+    "name": "Telegram文档2",
+    "path_id": "path25",
+    "path_name": "/sdcard/Telegram/Telegram Documents/"
+  },
+  {
+    "name": "Telegram文档3",
+    "path_id": "path26",
+    "path_name": "/sdcard/Android/data/org.telegram.csc.messenger/files/Telegram/Telegram Documents/"
+  },
+  {
+    "name": "Telegram视频",
+    "path_id": "path27",
+    "path_name": "/sdcard/Android/data/org.telegram.csc.messenger/files/Telegram/Telegram Video/"
+  },
+  {
+    "name": "UC下载",
+    "path_id": "path28",
+    "path_name": "/sdcard/UCDownloads/"
+  },
+  {
+    "name": "UC极速版",
+    "path_id": "path29",
+    "path_name": "/sdcard/UCTurbo/Download/"
+  },
+  {
+    "name": "X浏览器",
+    "path_id": "path30",
+    "path_name": "/sdcard/Android/data/com.mmbox.xbrowser/files/downloads/"
+  },
+  {
+    "name": "下载目录",
+    "path_id": "path31",
+    "path_name": "/sdcard/Download/"
+  },
+  {
+    "name": "夸克下载",
+    "path_id": "path32",
+    "path_name": "/sdcard/Download/QuarkDownloads/"
+  },
+  {
+    "name": "夸克下载2",
+    "path_id": "path33",
+    "path_name": "/sdcard/quark/download/"
+  },
+  {
+    "name": "夸克下载3",
+    "path_id": "path34",
+    "path_name": "/sdcard/Quark/Download/"
+  },
+  {
+    "name": "安卓壁纸",
+    "path_id": "path35",
+    "path_name": "/sdcard/Android/data/com.androidesk/files/androidesk/"
+  },
+  {
+    "name": "微云",
+    "path_id": "path36",
+    "path_name": "/sdcard/微云保存的文件/"
+  },
+  {
+    "name": "微信下载",
+    "path_id": "path37",
+    "path_name": "/sdcard/Download/WeiXin/"
+  },
+  {
+    "name": "微信下载2",
+    "path_id": "path38",
+    "path_name": "/sdcard/Android/data/com.tencent.mm/MicroMsg/Download/"
+  },
+  {
+    "name": "微信下载3",
+    "path_id": "path39",
+    "path_name": "/sdcard/tencent/MicroMsg/Download/"
+  },
+  {
+    "name": "文叔叔",
+    "path_id": "path40",
+    "path_name": "/sdcard/Wenshushu/Download/"
+  },
+  {
+    "name": "浏览器下载",
+    "path_id": "path41",
+    "path_name": "/sdcard/Download/Browser/"
+  },
+  {
+    "name": "漫画屋",
+    "path_id": "path42",
+    "path_name": "/sdcard/Android/data/com.xnkjyyh.com/"
+  },
+  {
+    "name": "百度搜索",
+    "path_id": "path43",
+    "path_name": "/sdcard/Android/data/com.baidu.searchbox/files/downloads/"
+  },
+  {
+    "name": "百度网盘",
+    "path_id": "path44",
+    "path_name": "/sdcard/BaiduNetdisk/"
+  },
+  {
+    "name": "百度网盘下载",
+    "path_id": "path45",
+    "path_name": "/sdcard/Download/BaiduNetdisk/"
+  },
+  {
+    "name": "磁力下载",
+    "path_id": "path46",
+    "path_name": "/sdcard/Android/data/com.magicmagnet/files/"
+  },
+  {
+    "name": "腾讯文档",
+    "path_id": "path47",
+    "path_name": "/sdcard/TencentDocs/download/"
+  },
+  {
+    "name": "葫芦侠",
+    "path_id": "path48",
+    "path_name": "/sdcard/Android/data/com.huluxia.gametools/downloads/"
+  },
+  {
+    "name": "视频下载",
+    "path_id": "path49",
+    "path_name": "/sdcard/Android/data/com.video.download/files/"
+  },
+  {
+    "name": "豌豆荚",
+    "path_id": "path50",
+    "path_name": "/sdcard/wandoujia/downloader/apk/"
+  },
+  {
+    "name": "迅雷下载",
+    "path_id": "path51",
+    "path_name": "/sdcard/Android/data/com.xunlei.downloadprovider/files/ThunderDownload/888231461/"
+  },
+  {
+    "name": "迅雷下载2",
+    "path_id": "path52",
+    "path_name": "/sdcard/Android/data/com.xunlei.downloadprovider/files/ThunderDownload/"
+  },
+  {
+    "name": "酷安下载",
+    "path_id": "path53",
+    "path_name": "/sdcard/Android/data/com.coolapk.market/files/Download/"
+  },
+  {
+    "name": "闪电下载",
+    "path_id": "path54",
+    "path_name": "/sdcard/Android/data/com.flash.download/files/super_download/"
+  },
+  {
+    "name": "阿里云盘",
+    "path_id": "path55",
+    "path_name": "/sdcard/AliYunPan/"
+  }
+]

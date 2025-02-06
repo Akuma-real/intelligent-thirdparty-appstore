@@ -1,1 +1,0 @@
-/sdcard/Android/data/com.huluxia.gametools/downloads/ 

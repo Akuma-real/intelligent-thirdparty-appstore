@@ -1,1 +1,0 @@
-# intelligent-thirdparty-appstore

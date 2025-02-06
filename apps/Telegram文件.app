@@ -1,1 +1,0 @@
-/sdcard/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/ 

@@ -1,1 +1,0 @@
-/sdcard/Telegram/Telegram Documents/ 

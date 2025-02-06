@@ -1,1 +1,0 @@
-/sdcard/Android/data/org.thunderdog.challegram/files/documents/ 

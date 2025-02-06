@@ -1,1 +1,0 @@
-/sdcard/Android/data/com.tencent.tim/Tencent/TIMfile_recv/ 

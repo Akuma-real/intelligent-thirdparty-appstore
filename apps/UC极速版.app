@@ -1,1 +1,0 @@
-/sdcard/UCTurbo/Download/ 

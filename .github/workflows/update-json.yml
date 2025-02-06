@@ -29,15 +29,18 @@ jobs:
 
           # 读取所有 .app 文件
           apps_dir = Path('apps')
-          apps_data = {}
+          apps_data = []
           
           for i, app_file in enumerate(sorted(apps_dir.glob('*.app')), 1):
               with open(app_file, 'r', encoding='utf-8') as f:
                   path = f.read().strip()
                   name = app_file.stem  # 获取文件名（不含扩展名）
-                  apps_data[name] = {
-                      f"path{i}": path
+                  app_data = {
+                      "name": name,
+                      "path_id": f"path{i}",
+                      "path_name": path
                   }
+                  apps_data.append(app_data)
           
           # 写入新文件
           with open('new_thirdparty.json', 'w', encoding='utf-8') as f:
